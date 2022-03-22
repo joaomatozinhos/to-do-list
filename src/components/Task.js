@@ -1,13 +1,7 @@
 import React from 'react'
 
 function Task(props) {
-  return (
-    <div className="task-container">
-      <ul>
-        <li>{props.task.title}</li>
-      </ul>
-    </div>
-  )
+  return <li className="task-container">{props.task.title}</li>
 }
 
 export default Task

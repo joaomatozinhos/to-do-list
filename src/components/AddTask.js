@@ -20,6 +20,7 @@ function AddTask(props) {
         className="button"
         onClick={() => {
           props.handleAddTask(inputData)
+          setInputData('')
         }}
       >
         Adicionar

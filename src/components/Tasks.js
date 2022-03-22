@@ -3,11 +3,11 @@ import Task from './Task'
 
 function Tasks(props) {
   return (
-    <div>
+    <ul>
       {props.tasks.map(task => (
         <Task task={task}></Task>
       ))}
-    </div>
+    </ul>
   )
 }
 
