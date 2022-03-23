@@ -5,7 +5,7 @@ function Tasks(props) {
   return (
     <ul>
       {props.tasks.map(task => (
-        <Task task={task}></Task>
+        <Task task={task} onCompleted={props.onCompleted}></Task>
       ))}
     </ul>
   )

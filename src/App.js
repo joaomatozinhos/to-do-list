@@ -27,13 +27,22 @@ function App() {
         completed: false
       }
     ])
-    console.log(tasks)
+  }
+
+  function onCompleted(taskID) {
+    let updateTasks = tasks.map(task => {
+      if (task.id === taskID) {
+        task.completed = !task.completed
+      }
+      return task
+    })
+    setTasks(updateTasks)
   }
 
   return (
     <div className="container">
       <AddTask handleAddTask={handleAddTask}></AddTask>
-      <Tasks tasks={tasks}></Tasks>
+      <Tasks tasks={tasks} onCompleted={onCompleted}></Tasks>
     </div>
   )
 }
