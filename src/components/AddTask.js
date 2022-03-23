@@ -10,21 +10,24 @@ function AddTask(props) {
 
   return (
     <div className="add-task-container">
-      <input
-        type="text"
-        className="add-task-input"
-        onChange={handleInputChange}
-        value={inputData}
-      ></input>
-      <button
-        className="button"
-        onClick={() => {
-          props.handleAddTask(inputData)
-          setInputData('')
-        }}
-      >
-        Adicionar
-      </button>
+      <form>
+        <input
+          type="text"
+          className="add-task-input"
+          onChange={handleInputChange}
+          value={inputData}
+        ></input>
+        <button
+          className="button"
+          onClick={e => {
+            e.preventDefault()
+            props.handleAddTask(inputData)
+            setInputData('')
+          }}
+        >
+          Adicionar
+        </button>
+      </form>
     </div>
   )
 }
