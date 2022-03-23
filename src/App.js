@@ -19,14 +19,16 @@ function App() {
   ])
 
   function handleAddTask(taskTitle) {
-    setTasks([
-      ...tasks,
-      {
-        id: uuidv4(),
-        title: taskTitle,
-        completed: false
-      }
-    ])
+    if (taskTitle !== '') {
+      setTasks([
+        ...tasks,
+        {
+          id: uuidv4(),
+          title: taskTitle,
+          completed: false
+        }
+      ])
+    }
   }
 
   function onCompleted(taskID) {
