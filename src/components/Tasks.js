@@ -5,7 +5,11 @@ function Tasks(props) {
   return (
     <ul>
       {props.tasks.map(task => (
-        <Task task={task} onCompleted={props.onCompleted}></Task>
+        <Task
+          task={task}
+          onCompleted={props.onCompleted}
+          onTaskDeleted={props.onTaskDeleted}
+        ></Task>
       ))}
     </ul>
   )

@@ -41,10 +41,19 @@ function App() {
     setTasks(updateTasks)
   }
 
+  function onTaskDeleted(taskID) {
+    const filteredTasks = tasks.filter(task => task.id !== taskID)
+    setTasks(filteredTasks)
+  }
+
   return (
     <div className="container">
       <AddTask handleAddTask={handleAddTask}></AddTask>
-      <Tasks tasks={tasks} onCompleted={onCompleted}></Tasks>
+      <Tasks
+        tasks={tasks}
+        onCompleted={onCompleted}
+        onTaskDeleted={onTaskDeleted}
+      ></Tasks>
     </div>
   )
 }

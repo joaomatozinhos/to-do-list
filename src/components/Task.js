@@ -8,6 +8,12 @@ function Task(props) {
       onClick={() => props.onCompleted(props.task.id)}
     >
       {props.task.title}
+      <button
+        className="remove-task-button"
+        onClick={() => props.onTaskDeleted(props.task.id)}
+      >
+        X
+      </button>
     </li>
   )
 }
