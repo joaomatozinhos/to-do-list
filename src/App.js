@@ -42,7 +42,7 @@ function App() {
   }
 
   function onTaskDeleted(taskID) {
-    const filteredTasks = tasks.filter(task => task.id !== taskID)
+    let filteredTasks = tasks.filter(task => task.id !== taskID)
     setTasks(filteredTasks)
   }
 
