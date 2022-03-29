@@ -1,4 +1,5 @@
 import React from 'react'
+import { CgClose, CgInfo } from 'react-icons/cg'
 
 function Task(props) {
   return (
@@ -12,11 +13,14 @@ function Task(props) {
       >
         {props.task.title}
       </li>
+      <button className="details-task-button">
+        <CgInfo></CgInfo>
+      </button>
       <button
         className="remove-task-button"
         onClick={() => props.onTaskDeleted(props.task.id)}
       >
-        X
+        <CgClose></CgClose>
       </button>
     </div>
   )
