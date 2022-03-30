@@ -90,3 +90,24 @@ form {
 .details-task-button {
   right: 45px;
 }
+
+.task-details-container {
+  background-color: #444;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.task-details-container h2 {
+  color: chartreuse;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.back-button {
+  width: 30%;
+  margin-top: 10px;
+}
