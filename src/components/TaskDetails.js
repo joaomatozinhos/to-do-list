@@ -1,13 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 function TaskDetails() {
   const params = useParams()
-  console.log(params)
+  const navigate = useNavigate()
+
+  function handleBackButtonClick() {
+    navigate(-1)
+  }
 
   return (
     <div>
-      <button className="button back-button">Voltar</button>
+      <button className="button back-button" onClick={handleBackButtonClick}>
+        Voltar
+      </button>
       <div className="task-details-container">
         <h2>{params.taskTitle}</h2>
         <p>
