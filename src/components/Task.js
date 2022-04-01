@@ -20,15 +20,20 @@ function Task(props) {
       >
         {props.task.title}
       </li>
-      <button className="details-task-button" onClick={handleTaskDetailsClick}>
-        <CgInfo></CgInfo>
-      </button>
-      <button
-        className="remove-task-button"
-        onClick={() => props.onTaskDeleted(props.task.id)}
-      >
-        <CgClose></CgClose>
-      </button>
+      <div className="buttons-container ">
+        <button
+          className="details-task-button"
+          onClick={handleTaskDetailsClick}
+        >
+          <CgInfo></CgInfo>
+        </button>
+        <button
+          className="remove-task-button"
+          onClick={() => props.onTaskDeleted(props.task.id)}
+        >
+          <CgClose></CgClose>
+        </button>
+      </div>
     </div>
   )
 }

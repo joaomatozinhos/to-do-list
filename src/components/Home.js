@@ -1,22 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 import Tasks from '../components/Tasks'
 import AddTask from '../components/AddTask'
 
 function Home() {
-  const [tasks, setTasks] = useState([
-    {
-      id: '1',
-      title: 'Estudar React JS',
-      completed: false
-    },
-    {
-      id: '2',
-      title: "Ler 10 páginas do livro 'Código Limpo'",
-      completed: true
-    }
-  ])
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.cypress.io/todos?_limit=10')
+      .then(response => response.json())
+      .then(data => {
+        setTasks(data)
+      })
+  }, [])
 
   function handleAddTask(taskTitle) {
     if (taskTitle !== '') {

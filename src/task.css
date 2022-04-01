@@ -63,6 +63,12 @@ form {
   outline: none;
 }
 
+.buttons-container {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .button {
   background-color: chartreuse;
   color: #444;
