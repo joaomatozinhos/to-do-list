@@ -6,7 +6,7 @@ function Tasks(props) {
     <ul>
       {props.tasks.map(task => (
         <Task
-          // key={task.id}
+          key={task.id}
           task={task}
           onCompleted={props.onCompleted}
           onTaskDeleted={props.onTaskDeleted}
