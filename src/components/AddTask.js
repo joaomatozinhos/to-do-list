@@ -18,14 +18,14 @@ function AddTask(props) {
           value={inputData}
         ></input>
         <button
-          className="button"
+          className="button add-task-button"
           onClick={e => {
             e.preventDefault()
             props.handleAddTask(inputData)
             setInputData('')
           }}
         >
-          Adicionar
+          Add
         </button>
       </form>
     </div>

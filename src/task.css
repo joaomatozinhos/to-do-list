@@ -87,6 +87,10 @@ form {
   color: chartreuse;
 }
 
+.add-task-button {
+  padding: 10px 25px;
+}
+
 .remove-task-button,
 .details-task-button {
   background-color: #444;

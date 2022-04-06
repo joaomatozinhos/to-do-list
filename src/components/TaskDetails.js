@@ -12,7 +12,7 @@ function TaskDetails() {
   return (
     <div>
       <button className="button back-button" onClick={handleBackButtonClick}>
-        Voltar
+        Back
       </button>
       <div className="task-details-container">
         <h2>{params.taskTitle}</h2>

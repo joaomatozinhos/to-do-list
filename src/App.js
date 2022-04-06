@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <h1>Minhas Tarefas</h1>
+        <h1>My Tasks</h1>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/:taskTitle" element={<TaskDetails />}></Route>
