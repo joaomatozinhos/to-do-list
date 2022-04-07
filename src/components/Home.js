@@ -7,13 +7,24 @@ import AddTask from '../components/AddTask'
 function Home() {
   const [tasks, setTasks] = useState([])
 
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.cypress.io/todos?_limit=10')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setTasks(data)
+  //     })
+  // }, [])
+
   useEffect(() => {
-    fetch('https://jsonplaceholder.cypress.io/todos?_limit=10')
-      .then(response => response.json())
-      .then(data => {
-        setTasks(data)
-      })
+    if (localStorage.getItem('savedTasks')) {
+      let savedTasks = JSON.parse(localStorage.getItem('savedTasks'))
+      setTasks(savedTasks)
+    }
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('savedTasks', JSON.stringify(tasks))
+  }, [tasks])
 
   function handleAddTask(taskTitle) {
     if (taskTitle !== '') {
