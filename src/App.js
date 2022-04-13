@@ -7,7 +7,7 @@ import './task.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="container">
         <h1>My Tasks</h1>
         <Routes>

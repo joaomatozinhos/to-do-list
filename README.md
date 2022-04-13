@@ -8,3 +8,7 @@ Local Storage was used to persist the data.
 
 - **uuid** to generate random ID's
 - **react router dom** for route control
+
+### See the result
+
+https://joaomatozinhos.github.io/to-do-list/
